@@ -19,7 +19,7 @@ Before({tags: "@angularTest"}, function () {
 After(async function (scenario) {
   // This hook will be executed before scenarios tagged with @foo
   console.log("End of step")
-  if(scenario.result.status==Status.FAILED)
+  if(scenario.result.status==status.FAILED)
   {
 		const screenshot = await browser.takeScreenshot();
 		this.attach(screenshot, "image/png");

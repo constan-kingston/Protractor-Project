@@ -27,7 +27,7 @@ cucumber_1.After(function (scenario) {
     return __awaiter(this, void 0, void 0, function* () {
         // This hook will be executed before scenarios tagged with @foo
         console.log("End of step");
-        if (scenario.result.status == Status.FAILED) {
+        if (scenario.result.status == status.FAILED) {
             const screenshot = yield protractor_1.browser.takeScreenshot();
             this.attach(screenshot, "image/png");
         }
